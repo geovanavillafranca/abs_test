@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h2>Criando um pedido</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Latest Orders</h4>
+                </div>
+                <div class="comment-widgets scrollable">
+                    {% for t in test %}
+                        Nome: {{ t.name }}
+                        Idade: {{ t.old }}
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header"><h4>Filters</h4></div>
+                <div class="card-body">
+                    <form class="form" method="get">
+                        <div class="form-group row">
+                                <label for="search_name" class="col-sm-3 text-right control-label col-form-label">Search</label>
+                                <div class="col-sm-9">
+                                    <input type="text"
+                                           class="form-control"
+                                           id="search_name"
+                                           name="search_name"
+                                           {% if request.GET.search_name %} value="{{ request.GET.search_name }}" {% else %}
+                                            placeholder="Search Here" {% endif %}
+                                    >
+                                </div>
+                        </div>
+                        <br><br>
+                        <label>Datepicker</label>
+                        <div class="input-group">
+                            <input
+                                    name="date_start"
+                                    type="text"
+                                    class="form-control mydatepicker"
+                                    {% if request.GET.date_start %}
+                                    value="{{ request.GET.date_start }}"
+                                    {% else %}
+                                    placeholder="mm/dd/yyyy"
+                                    {% endif %}
+                            >
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                        <label class="m-t-15">Autoclose Datepicker</label>
+                        <div class="input-group">
+                            <input
+                                    name="date_end"
+                                    type="text"
+                                    class="form-control"
+                                    id="datepicker-autoclose"
+                                    {% if request.GET.date_end %}
+                                    value="{{ request.GET.date_end }}"
+                                    {% else %}
+                                    placeholder="mm/dd/yyyy"
+                                    {% endif %}
+                            >
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a href="" class="btn btn-warning">Reset</a>
+                    </form>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-header">
+                    <button data-href="" class="btn btn-info result_button">Order Analysis</button>
+                    <button data-href="" class="btn btn-info result_button">Category Analysis</button>
+                </div>
+                <div class="card-body" id="result_container">
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

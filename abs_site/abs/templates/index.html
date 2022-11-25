@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    
+
+    <div class="container-fluid">
+
+        <!-- Start Page Content -->
+        <div class="row">
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-hover">
+                    <a href="">
+                    <div class="box bg-danger text-center">
+                        <h1 class="font-light text-white"><i class="mdi mdi-view-dashboard"></i></h1>
+                        <h6 class="text-white">Novo Pedido</h6>
+                    </div>
+                        </a>
+                </div>
+            </div>
+            
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-hover">
+                    <a href="">
+                    <div class="box bg-warning text-center">
+                        <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                        <h6 class="text-white">Cadastrar Cliente</h6>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Column -->
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-hover">
+                    <a href="{% url 'product' %}">
+                    <div class="box bg-dark text-center">
+                        <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                        <h6 class="text-white">Cadastrar Produto</h6>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                 <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Últimos Pedidos</h4>
+
+                    </div>
+                    <div class="comment-widgets scrollable">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+
+    <!-- ##### Best Receipe Area Start ##### -->
+    <!-- <section class="best-receipe-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-best-receipe-area mb-30">
+                        <img src="{% static 'img/bg-img/user_120.png' %}" alt="">
+                        <div class="receipe-content">
+                                <h5>Criar cliente</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-best-receipe-area mb-30">
+                        <img src="{% static 'img/bg-img/carrinho_300.png' %}" alt="">
+                        <div class="receipe-content">
+                            <a href="">
+                                <h5>Criar pedido</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ##### Best Receipe Area End ##### -->
+
+    
+
+{% endblock %}

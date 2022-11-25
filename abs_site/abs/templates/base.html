@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Título -->
+    <title>ABS Site</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'site.css' %}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'assets/libs/fullcalendar/dist/fullcalendar.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/extra-libs/calendar/calendar.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- ##### Header Area Start ##### -->
+    {% include 'partials/menu.html' %}
+    <!-- ##### Header Area End ##### -->
+
+    {% block content %}{% endblock %}
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js'%}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js' %}"></script>
+
+    <!-- ##### Footer Area Start ##### -->
+    {% include 'partials/footer.html' %}
+    <!-- ##### Footer Area End ##### -->
+
+</body>
+
+</html>
